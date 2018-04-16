@@ -49,3 +49,25 @@ $a + $b = 0.799999999^无限
 
 》
 
+
+《超全局数组
+$GLOBEL, 「$_FILES, $_SERVER」 这一堆都属于globel
+🈲️request要少用，安全性低，因为接受get，post和cookie
+
+$_SERVER很有意思
+比如输入 $_SERVER['SERVER_ADDR'] 找server的ip地址
+$_SERVER['REQUEST_TIME'] 这一类都可以调用
+$_SERVER['HTTP_REFER'],从哪调过来的，上级请求页面
+》
+
+《定义变量
+CONST是语言结构，更快。define是函数，慢一些
+常量一设置，就不能改。
+
+有很多预设的常量
+比如_CLASS_,_METHOD_ ->类名字加方法名。
+_FILE_ 返回所在文件的路径加上文件名字
+》
+
+
+
