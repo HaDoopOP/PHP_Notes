@@ -1,0 +1,13 @@
+PHP是一种COW（change on write)类型的语言。
+
+比如a和b同时指向一段代码，until these code has been modified under either a or b, a and b will refer to the same
+memory address.
+
+unset只会销毁引用，不会在内存中销毁这段code。
+a和b同时指向一段，unset a, b依然指向那段代码。
+
+⚠️如果a和b指向的是一个对象，cow不会执行
+若更改b，a也被更改了，并不会copy出一块新的空间。
+2-2里面说了，对象是引用传递。
+如果不想这样，用obj的clone命令。
+
