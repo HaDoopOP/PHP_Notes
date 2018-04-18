@@ -1,0 +1,15 @@
+有三种大概类型
+for do while -----》仅仅可以遍历索引。
+foreach  ---》用于遍历索引和关联数组，foreach会对数组指针进行reset，确保遍历了所有item。👌
+list（）each（）----》不会reset指针，很可能只遍历了一个片段。
+
+关键词cintinue和break都可以跳出循环，但是continue更厉害。
+比如for（）{
+    switch($var) {
+    continue2; ------>意思是直接跳出两层循环 ⚠️⚠️⚠️（跳出continue外的那一层循环）
+    }
+ }
+ 
+ 如果判断条件复杂，建议用switch case,因为程序会直接跳转到对应的case而不是一层一层判断。
+ 
+ 
