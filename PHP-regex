@@ -8,3 +8,10 @@ $pattern = '/<b>.*<\/b>/' 加一个反斜杠，不然匹配错误。 ⚠️容�
 如果$pattern = '/<b>.*<\/b>/'的话，只会匹配到第一个<b>和最后一个结尾的</b>
 把 $pattern 改成 = '/<b>.*?<\/b>/' 结合preg_replace_all()就会匹配所有满足pattern的string。
 ？会取消贪婪模式
+
+
+
+另外一种需要注意的是从regex里面拿数据，后项引用。
+即在$pattern中拿（）包起来想拿的部分。
+
+var_dump的$match的时候会return一个list，可以找到了。
