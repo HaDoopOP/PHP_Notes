@@ -1,0 +1,2 @@
+parent::func() 来继承父类的function，不然直接就override掉了。
+
