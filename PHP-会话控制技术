@@ -38,3 +38,5 @@ SID⚠️⚠️非常智能，当cookie开启的时候，它是空。只有当co
 Sesion以文件形式储存很容易造成不统一，比如在webservice1上面输入了密码，然后跳转到2了。找不到sessionID对应的文件，因为都存在服务器一上面了。
 可以把session存到mem cache里面去，redis甚至于mysql。
 
+![题目](/image/session.png)
+
