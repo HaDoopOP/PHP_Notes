@@ -28,8 +28,25 @@ $a = false || true; 先计算后面的，返还的是true，再给a进行赋值�
 可以引入一个常量$dleta == 0.0000001 //一个可以忽略的差距
 if(abs($a - $b) <$delta) { then 判断为相等 };
 
+
+---
 用round的时候，会向原理-----0------的地方取值。 -2.5编程-3， 2.5变为3
+---
 
 
+---
 mt_rand()比rand()更厉害，更离散，更随机，更快；
+---
 
+---
+打印复数形式单词的时候，可以通过 ($number ==1 ? 'apple' : 'apples') 来绕过单复数需求。
+但是如果一堆就麻烦啦，可以借助类似叫 may_pluralize()的函数来写。
+
+$plurals = array(
+    'fish' => 'fish',
+    'person' => 'people'
+  );
+  
+  外加一个boolean的 $singular_word 去判断 是否==1；
+  
+ ---
