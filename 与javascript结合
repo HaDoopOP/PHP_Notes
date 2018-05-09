@@ -3,3 +3,7 @@ JS name 变量有些特殊；
     var a;
     
     这时a不会丢失，还是
+
+
+定义数组的时候，要先实例话这个对象；
+var arr = new Array(size);
