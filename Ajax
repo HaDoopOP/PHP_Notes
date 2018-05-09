@@ -1,0 +1,18 @@
+服务端程序员，前段框架配合ajax。
+
+Asynchronous JavaScript and XML 的基本工作原理如下
+异步处理，通过后台和服务器进行少量的数据交换，ajax可以使网页实现异步更新。
+
+XML HTTPRequest是ajax基础，ajax是基于这个obj的。
+XMLHttpRequest是用于在后台和服务器交换数据。
+
+比如open(method,url,async)  method如get还是post
+如果相应返回的结果是text，就用responseText接受。
+如果返回结果是xml类型，就用responseXML接收。
+
+onreadystatechange是准备状态的一个改变，有一个属性叫做ReadyState，里面有一些code去represent状态。
+比如0初始化，1服务器连接已经弄好了，2请求已经接受，3处理中，4请求完成并且响应已就绪。
+
+监听readystate，如果值为4，就可以继续处理数据了。
+ready state 和 status 200，400不是一个东西。
+
