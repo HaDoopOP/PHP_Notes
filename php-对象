@@ -2,3 +2,7 @@ Interface 类似一个契约，只要前方验证了该类implement了这个inte
 这个类就一定已经实现了一些function。
 
 trait 和 use 也很有意思，可以在没有继承关系的对象见进行代码的复用。
+
+$a = $b;  按引用复制
+$a = clone $b; 按值复制
+
