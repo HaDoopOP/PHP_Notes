@@ -11,3 +11,20 @@ $a = clone $b; 按值复制
 在静态里面，用self instead of this.
 是因为，静态方法并非作用于定义这个方法的类的一个实例，故PHP不会为我们构造一个可以在这个方法中临时使用的对象。
 不能用$this，是因为根本没有可操作的$this.
+
+
+PHP Cook Book里面讲static的时候，提到了“使用静态属性的一个原因是可以在多个database 对象之间使用一个连接。
+                                    出于效率原因考量，不要每次实例化一个数据库的时候，就创建一个新连接“。
+
+第一次协商的时候就建立好一个连接，然后对每个实例重用这个连接。 类似于我写java时候的factory pattern，每次都去factory里面拿这个数据库连接。
+
+public class BigCountryDaoFactory {
+    private static BigCountryDao _bigCountryDao;           Dao里面定义了这个interface可以支持的功能
+
+    static {
+        _bigCountryDao =  new BigCountryDB();             去实例化这个Dao
+    }
+
+    public static BigCountryDao getBean() {return _bigCountryDao;}       通过调用Factory，每次都从这个里面拿这个static的资源。
+}
+
