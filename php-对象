@@ -8,3 +8,6 @@ $a = clone $b; 按值复制
 
 调用静态方法的时候，由于使用的是Class name instead of object name,所以不用加$.
 
+在静态里面，用self instead of this.
+是因为，静态方法并非作用于定义这个方法的类的一个实例，故PHP不会为我们构造一个可以在这个方法中临时使用的对象。
+不能用$this，是因为根本没有可操作的$this.
