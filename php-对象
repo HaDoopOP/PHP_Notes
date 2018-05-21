@@ -6,3 +6,5 @@ trait 和 use 也很有意思，可以在没有继承关系的对象见进行代
 $a = $b;  按引用复制
 $a = clone $b; 按值复制
 
+调用静态方法的时候，由于使用的是Class name instead of object name,所以不用加$.
+
